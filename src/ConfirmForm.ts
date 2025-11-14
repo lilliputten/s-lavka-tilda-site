@@ -29,10 +29,7 @@ export function processForm(formBottomText: HTMLDivElement) {
 
 export function initConfirmForms() {
   const formBottomTextNodes = document.querySelectorAll<HTMLDivElement>(
-    '[class*="__form-bottom-text"]',
+    '[class*="__form-bottom-text"], .t716__hint',
   );
-  console.log('[ConfirmForm:initConfirmForms]', {
-    formBottomTextNodes,
-  });
   formBottomTextNodes.forEach(processForm);
 }

@@ -2,11 +2,7 @@
 
 /*! Root */
 
-body {
-  // padding-top: $NavHeaderTotalHeight;
-}
-
-.disabled {
+#allrecords .disabled {
   opacity: 0.5;
   pointer-events: none;
 }

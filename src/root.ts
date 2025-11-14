@@ -1,6 +1,6 @@
 /** @module Scripts root module
  *  @since 2025.11.13, 20:32
- *  @changed 2025.11.13, 20:32
+ *  @changed 2025.11.14, 23:15
  */
 
 import './project-info.scss';
@@ -11,9 +11,7 @@ import { initAddresses } from './Addresses';
 import { initConfirmForms } from './ConfirmForm';
 import { isDebug, isDev } from './core/constants';
 import { removeDevNoteBlocks } from './DevNote';
-
-// import { initStoreProduct } from './StoreProduct';
-// import { initSubPage } from './SubPage';
+import { cleanupFooter } from './Footer';
 
 /** Print app info */
 function printAppInfo() {
@@ -29,6 +27,7 @@ function initPage() {
   initAddresses();
   initConfirmForms();
   removeDevNoteBlocks();
+  cleanupFooter();
   // Forcibely update components' dimensions
   window.dispatchEvent(new Event('resize'));
 }

@@ -1,0 +1,42 @@
+@use '../variables' as *;
+
+/*! Form */
+
+.uc-Footer {
+  // Links...
+  @include activeLink;
+
+  #allrecords & .t977__col_left a {
+    color: var(--secondaryColor);
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Left (logo, contacts) column
+  .t977__col_left {
+    #allrecords & ul {
+      padding-left: 0;
+    }
+    li {
+      list-style-type: none;
+      display: block;
+      margin: 0.5em 0;
+    }
+  }
+
+  // Main section (with inner columns
+  #allrecords & .t977__col_center {
+    .t-descr {
+      color: rgba(255 255 255 / 30%);
+    }
+    u {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    a {
+      color: #fff !important;
+    }
+  }
+}

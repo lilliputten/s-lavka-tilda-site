@@ -1,5 +1,8 @@
 import './Root.scss';
+import './SubPage.scss';
 import './ConfirmForm.scss';
 import './NavHeader.scss';
+import './Footer.scss';
 import './Hero.scss';
 import './Addresses.scss';
+import './Form.scss';

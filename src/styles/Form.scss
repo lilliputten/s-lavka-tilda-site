@@ -1,0 +1,30 @@
+@use '../variables' as *;
+
+/*! Form */
+
+.t702__wrapper,
+.uc-Form {
+  // Links...
+  // @include activeLink;
+  .t-submit {
+    @include selfActiveLink;
+    #allrecords &.disabled {
+      background-color: rgba($secondaryColor, 50%);
+      // border: 1px dashed var(--secondaryColor) !important;
+    }
+  }
+}
+
+// Form bottom text checkbox
+[class*='__form-bottom-text'],
+.t716__hint {
+  a {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+  input[type='checkbox'] {
+    // vertical-align: bottom;
+    accent-color: var(--secondaryColor);
+  }
+}
