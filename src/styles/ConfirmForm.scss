@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+// #allrecords {
+
+/*! ConfirmForm */
+
+[class*='__form-bottom-text'] {
+  @include activeLink;
+}

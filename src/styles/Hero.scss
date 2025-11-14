@@ -1,0 +1,133 @@
+@use 'sass:math';
+@use '../variables' as *;
+
+// TODO: Fix an initial render bug on screen widths ~620-780px
+
+/*! Hero */
+
+.uc-Hero {
+  // Custom styles
+
+  // Links...
+  @include basicActiveLink;
+
+  // Adjust geometry...
+  .t-cover__wrapper {
+    .t-width {
+      padding: 0;
+    }
+  }
+
+  .t-descr {
+    line-height: 1.2;
+    margin-top: 1em;
+    strong {
+      font-size: 200%;
+    }
+    u {
+      // color: var(--secondaryColor);
+      text-decoration: none;
+      font-family: var(--defaultFont);
+      font-weight: bold;
+    }
+  }
+  .t-btn {
+    margin-top: 1em;
+    padding: 1em 2em;
+    font-size: 150%;
+  }
+
+  .t-slds__container {
+    background-color: var(--primaryColor);
+  }
+
+  @mixin setHeight($height, $extraHeight: false) {
+    .t-slds__items-wrapper,
+    .t-cover__wrapper,
+    .t734__table,
+    .t-cover .t-cover__carrier,
+    .t-cover {
+      height: $height !important;
+    }
+    @if $extraHeight {
+      .t-slds__items-wrapper {
+        padding-top: $navbarHeight;
+      }
+      .t-slds__arrow_container > li {
+        // padding-top: math.floor(math.div($navbarHeight, 2));
+        padding-top: $navbarHeight;
+      }
+    } @else {
+      .t-slds__items-wrapper {
+        padding-top: $navbarMiniHeight;
+      }
+      .t-slds__arrow_container > li {
+        padding-top: $navbarMiniHeight;
+        // padding-top: math.floor(math.div($navbarMiniHeight, 2));
+      }
+    }
+  }
+
+  & {
+    @include setHeight(600px, true);
+    .t-title > div,
+    .t-descr > div {
+      font-size: 200% !important;
+    }
+  }
+  @media (width <= $extraWideTreshold) {
+    @include setHeight(500px, true);
+    .t-title > div,
+    .t-descr > div {
+      font-size: 170% !important;
+    }
+    .t-btn {
+      font-size: 120%;
+    }
+  }
+  @media (width <= $wideTreshold) {
+    @include setHeight(500px, true);
+    .t-title > div,
+    .t-descr > div {
+      font-size: 140% !important;
+    }
+    .t-btn {
+      font-size: 100%;
+    }
+  }
+  @media (width <= $mobileTreshold) {
+    @include setHeight(400px);
+    .t-title > div,
+    .t-descr > div {
+      font-size: 100% !important;
+    }
+    .t-btn {
+      font-size: 80%;
+    }
+  }
+  @media (width <= $smallTreshold) {
+    @include setHeight(300px);
+    .t-btn {
+      font-size: 70%;
+    }
+  }
+
+  // Interactive navigation
+  .t-slds__arrow {
+    transition: all var(--transitionTimeMs);
+    &:hover {
+      background-color: var(--secondaryColor) !important;
+      opacity: 1;
+    }
+  }
+  .t-slds__bullet {
+    button {
+      transition: all var(--transitionTimeMs);
+    }
+    &:hover button {
+      background-color: var(--secondaryColor) !important;
+      border-color: var(--secondaryColor) !important;
+      opacity: 1;
+    }
+  }
+}

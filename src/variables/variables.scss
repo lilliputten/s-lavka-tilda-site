@@ -1,0 +1,33 @@
+$primaryColor: #929;
+$secondaryColor: #f73;
+
+$violetColor: #76a;
+$violetLightColor: #cce;
+
+$socialIconSize: 32px;
+$socialIconSmallSize: 22px;
+
+// Delays
+
+$transitionTimeMs: 250ms;
+$animationTimeMs: 500ms;
+$disappearTimeMs: 1000ms;
+
+// NavHeader
+
+$navbarHeight: 100px;
+$navbarMiniHeight: 70px;
+// $topMenuHeight: 100px;
+
+// Fonts
+
+$defaultFont: 'Tilda Sans', Arial, sans-serif;
+$titleFont: 'Amatic SC', Arial, sans-serif;
+$defaultFontSize: 16px;
+
+// Adaptive layouts...
+
+$extraWideTreshold: 1400px;
+$wideTreshold: 1200px;
+$mobileTreshold: 980px;
+$smallTreshold: 660px;
