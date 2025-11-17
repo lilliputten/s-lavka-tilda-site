@@ -31,42 +31,15 @@
       width: 80px;
     }
   }
-
-  // @media (width > $mobileTreshold) {
-  //   .t228 {
-  //     margin: 15px auto;
-  //     $hPadding: 20px;
-  //     left: $hPadding;
-  //     right: $hPadding;
-  //     width: auto;
-  //   }
-  //   .t228__maincontainer {
-  //     background-color: rgba(var(--themeBgRGB) / 80%);
-  //     backdrop-filter: blur(5px);
-  //     border-radius: 10px;
-  //     $hPadding: 20px;
-  //     @media (width > $mobileTreshold) {
-  //       max-width: calc($mobileTreshold - ($hPadding * 2));
-  //     }
-  //     @media (width > $wideTreshold) {
-  //       max-width: calc($wideTreshold - ($hPadding * 2));
-  //     }
-  //   }
-  // }
-  // @media (width <= $mobileTreshold) {
-  //   .tmenu-mobile {
-  //     background-color: rgba(var(--themeBgRGB) / 100%);
-  //   }
-  //   .t228__maincontainer {
-  //     background-color: rgba(var(--themeBgRGB) / 90%);
-  //   }
-  // }
-  // @media (width <= 450px) {
-  //   .tmenu-mobile__burgerlogo {
-  //     img {
-  //       max-width: 85% !important;
-  //       margin: 0;
-  //     }
-  //   }
-  // }
+  @media (width > calc($extraWideTreshold + 100px)) { // 1400
+    .t-menu__link-item {
+      font-size: 20px;
+    }
+    .t-menusub__link-item {
+      font-size: 16px;
+    }
+    .t-btnflex__text {
+      font-size: 20px;
+    }
+  }
 }
