@@ -1,0 +1,21 @@
+@use '../variables' as *;
+
+/*! Breadcrumbs */
+
+#allrecords .uc-Breadcrumbs {
+  // @include basicActiveLink;
+  .t-text {
+    color: #d7d2e6;
+  }
+  a {
+    color: $primaryColor;
+    &:hover {
+      color: $secondaryColor;
+      text-decoration: underline;
+    }
+  }
+  u {
+    text-decoration: none;
+    color: #bab2d4;
+  }
+}

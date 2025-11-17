@@ -31,7 +31,8 @@
       width: 80px;
     }
   }
-  @media (width > calc($extraWideTreshold + 100px)) { // 1400
+  @media (width > calc($extraWideTreshold + 125px)) {
+    // 1400 +
     .t-menu__link-item {
       font-size: 20px;
     }
