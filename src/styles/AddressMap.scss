@@ -1,0 +1,23 @@
+@use '../variables' as *;
+
+/*! AddressMap */
+
+.uc-AddressMap {
+  // @include basicActiveLink;
+  #allrecords & a {
+    color: $primaryColor;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .t-sociallinks__item {
+    @include basicActiveLink;
+    svg {
+      &,
+      > * {
+        fill: $primaryColor;
+      }
+    }
+  }
+}

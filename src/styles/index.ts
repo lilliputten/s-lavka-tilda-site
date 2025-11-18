@@ -7,3 +7,6 @@ import './Footer.scss';
 import './Hero.scss';
 import './Addresses.scss';
 import './Form.scss';
+import './Reviews.scss';
+import './AddressMap.scss';
+import './ContactsText.scss';

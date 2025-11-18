@@ -1,8 +1,8 @@
 {
   "name": "s-lavka-tilda-site",
   "version": "0.0.1",
-  "timetag": "251118-0051",
-  "timestamp": "2025.11.18 00:51:23 +0300",
+  "timetag": "251119-0105",
+  "timestamp": "2025.11.19 01:05:08 +0300",
   "changed": "2025.11.13, 20:26",
   "description": "Compillable js (ts) and css (scss) assets for s-lavka tilda site",
   "main": "index.html",
