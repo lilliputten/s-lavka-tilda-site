@@ -33,6 +33,10 @@
   }
   @media (width > calc($extraWideTreshold + 125px)) {
     // 1400 +
+    .t228__imglogo {
+      width: 180px;
+      max-height: 90px !important;
+    }
     .t-menu__link-item {
       font-size: 20px;
     }
