@@ -21,15 +21,6 @@
   .t-descr {
     line-height: 1.2;
     margin-top: 1em;
-    strong {
-      font-size: 200%;
-    }
-    u {
-      // color: var(--secondaryColor);
-      text-decoration: none;
-      font-family: var(--defaultFont);
-      font-weight: bold;
-    }
   }
   .t-btn {
     margin-top: 1em;
@@ -68,39 +59,62 @@
     }
   }
 
+  // Custom styles for specific tags form the editor
+  // The follwoing tags are available: strong, em, u, span
+  .t-title,
+  .t-descr {
+    // line-trhough -- enlarge
+    span {
+      font-size: 175%;
+      text-decoration: none !important;
+    }
+    /* // UNUSED
+     * u {
+     *   text-decoration: none;
+     *   font-family: var(--defaultFont);
+     *   font-weight: bold;
+     * }
+     */
+  }
+
+  // Base styles for title & descr blocks
+  $titleFontScale: 2.25;
+  $descrFontScale: 1.4;
+  @mixin setTitleFontSize($baseSize) {
+    .t-title {
+      font-size: calc($baseSize * $titleFontScale) !important;
+    }
+    .t-descr {
+      font-size: calc($baseSize * $descrFontScale) !important;
+    }
+    .t-title,
+    .t-descr {
+      & > div[data-customstyle='yes'] { // Inner div is for 'data-customstyle'
+        font-size: 100% !important;
+      }
+    }
+  }
   & {
     @include setHeight(600px, true);
-    .t-title > div,
-    .t-descr > div {
-      font-size: 200% !important;
-    }
+    @include setTitleFontSize(200%);
   }
   @media (width <= $extraWideTreshold) {
     @include setHeight(500px, true);
-    .t-title > div,
-    .t-descr > div {
-      font-size: 170% !important;
-    }
+    @include setTitleFontSize(170%);
     .t-btn {
       font-size: 120%;
     }
   }
   @media (width <= $wideTreshold) {
     @include setHeight(500px, true);
-    .t-title > div,
-    .t-descr > div {
-      font-size: 140% !important;
-    }
+    @include setTitleFontSize(140%);
     .t-btn {
       font-size: 100%;
     }
   }
   @media (width <= $mobileTreshold) {
     @include setHeight(400px);
-    .t-title > div,
-    .t-descr > div {
-      font-size: 100% !important;
-    }
+    @include setTitleFontSize(80%);
     .t-btn {
       font-size: 80%;
     }
