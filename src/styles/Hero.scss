@@ -23,9 +23,9 @@
     margin-top: 1em;
   }
   .t-btn {
-    margin-top: 1em;
+    margin-top: 2em;
     padding: 1em 2em;
-    font-size: 150%;
+    // font-size: 150%;
   }
 
   .t-slds__container {
@@ -89,7 +89,8 @@
     }
     .t-title,
     .t-descr {
-      & > div[data-customstyle='yes'] { // Inner div is for 'data-customstyle'
+      & > div[data-customstyle='yes'] {
+        // Inner div is for 'data-customstyle'
         font-size: 100% !important;
       }
     }
@@ -114,7 +115,7 @@
   }
   @media (width <= $mobileTreshold) {
     @include setHeight(400px);
-    @include setTitleFontSize(80%);
+    @include setTitleFontSize(70%);
     .t-btn {
       font-size: 80%;
     }

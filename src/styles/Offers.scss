@@ -1,0 +1,41 @@
+@use '../variables' as *;
+
+/*! Offers */
+
+.uc-ActionOffers,
+.uc-OfferBanner {
+  @include activeLink;
+}
+
+.uc-ActionOffers {
+  .t182__wrapper {
+    // padding: 0;
+  }
+  // Adaptive fix-ups
+  .t842__bgwrapper {
+    @media (width <= $tinyTreshold) {
+      width: auto !important;
+    }
+  }
+}
+
+.uc-Offers {
+  .js-product {
+    margin: 10px 0;
+  }
+  a {
+    // Disable links
+    cursor: default;
+    pointer-events: none;
+  }
+  .t-descr {
+    opacity: 1;
+    span {
+      text-decoration: none !important;
+      color: $primaryColor;
+      font-weight: bold;
+      // opacity: 0.6;
+      // font-size: 85%;
+    }
+  }
+}
