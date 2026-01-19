@@ -7,6 +7,7 @@
   @include activeLink;
 }
 
+// Offer blocks with an image and text
 .uc-ActionOffers {
   .t182__wrapper {
     // padding: 0;
@@ -15,6 +16,12 @@
   .t842__bgwrapper {
     @media (width <= $tinyTreshold) {
       width: auto !important;
+    }
+  }
+  .t-descr {
+    span {
+      text-decoration: none !important;
+      color: $primaryColor;
     }
   }
 }
@@ -27,6 +34,13 @@
     // Disable links
     cursor: default;
     pointer-events: none;
+  }
+  .t-bgimg,
+  img.t-img {
+    margin-top: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .t-descr {
     opacity: 1;

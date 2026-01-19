@@ -1,0 +1,23 @@
+@use '../variables' as *;
+
+/*! PriceCards */
+
+.uc-PriceCards {
+  #allrecords & .t-section__title {
+    // margin-bottom: 0;
+  }
+  .t754__parent {
+    // border: 1px solid red;
+  }
+  img.t-img {
+    margin-top: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  a {
+    // Disable links
+    cursor: default;
+    pointer-events: none;
+  }
+}

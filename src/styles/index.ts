@@ -11,3 +11,4 @@ import './Reviews.scss';
 import './AddressMap.scss';
 import './ContactsText.scss';
 import './Offers.scss';
+import './PriceCards.scss';
