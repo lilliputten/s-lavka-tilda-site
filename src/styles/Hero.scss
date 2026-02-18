@@ -63,18 +63,16 @@
   // The follwoing tags are available: strong, em, u, span
   .t-title,
   .t-descr {
-    // line-trhough -- enlarge
+    // line-trough -- enlarge
     span {
       font-size: 175%;
       text-decoration: none !important;
     }
-    /* // UNUSED
-     * u {
-     *   text-decoration: none;
-     *   font-family: var(--defaultFont);
-     *   font-weight: bold;
-     * }
-     */
+    // underlined- inverted color
+    u {
+      text-decoration: none;
+      color: $primaryColor;
+    }
   }
 
   // Base styles for title & descr blocks
